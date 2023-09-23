@@ -1,4 +1,4 @@
-for runnning:
+to start:
 
     clone this repo
     
@@ -10,4 +10,7 @@ bot address :
 
     https://t.me/BscScanTestTask_bot
 
-    
+optional you can run it by docker:
+
+    docker build -t bsc_bot .
+    docker run bsc_bot

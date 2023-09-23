@@ -30,6 +30,9 @@ class DataParser:
             self.error_message = "Error: Could not fetch data, please press /start again"
             return
         transactions: List[Dict] = json.loads(response.text).get("result", [])
+        if not transactions:
+            self.error_message = "Error: Could not fetch data, please press /start again"
+            return
         for transaction in transactions:
             if transaction.get("to").lower() == self.address.lower():
                 self.transactions.append(transaction)
@@ -59,7 +62,7 @@ class DataParser:
         if self.error_message:
             return self.error_message
         elif not self.transactions:
-            return "No data"
+            return "No incoming transactions"
         self.data_parser()
         return self.parsed_data
 
