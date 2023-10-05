@@ -1,3 +1,24 @@
+Description:
+
+    This chatbot is designed to provide users with a convenient way to view 
+    the history of all their incoming transactions on the bscscan exchange.
+    
+    The bot provides information about transaction details such as:
+    date, type, amount of cryptocurrency, exchange rate (if any), 
+    and other additional data.
+    
+    Interaction with the bscscan exchange API:
+    The bot accesses the exchange's API to obtain information about user 
+    transactions. It interacts with the exchange's API to get transaction 
+    data and details.
+
+TECHNOLOGY STACK:
+
+    python-telegram-bot
+    requests
+    api for bscscan.com
+    docker
+
 to start:
 
     clone this repo
